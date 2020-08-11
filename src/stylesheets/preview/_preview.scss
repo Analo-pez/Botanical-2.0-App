@@ -1,0 +1,180 @@
+@import '../common/functions';
+@import '../common/mixins';
+
+.app__preview {
+  background-image: url('../../images/preview2.png');
+  padding: rem(40) 0;
+  @include tablet {
+    padding: rem(175) 0;
+  }
+  .button-container {
+    width: rem(240);
+    margin: auto;
+    padding-bottom: rem(20);
+    .button__reset {
+      border: rem(1) solid $color-light;
+      border-radius: rem(15);
+      padding: rem(7);
+      background-color: transparent;
+      color: $color-medium-dark;
+      font-size: rem(12);
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        border-color: $color-main;
+      }
+      &--text {
+        display: inline-block;
+        margin-left: rem(5);
+        text-transform: uppercase;
+        font-family: $font-main;
+      }
+    }
+  }
+  &--card {
+    margin: auto;
+    width: rem(240);
+    height: rem(330);
+    background-color: $color-light;
+    box-shadow: 0 0 rem(5) $color-medium-dark;
+    &:hover {
+      transform: scale(1.1);
+    }
+    .top-block {
+      padding: rem(20) 0 rem(10);
+      .name_job {
+        line-height: 1.25;
+        font-family: $font-card;
+        padding-left: rem(15);
+
+        .full_name {
+          font-size: rem(18);
+        }
+        .job {
+          margin-top: rem(4);
+          font-size: rem(16);
+          color: $color-medium-dark;
+        }
+      }
+    }
+    .photo {
+      height: rem(200);
+      width: rem(240);
+      background-size: cover;
+      background-position: center;
+      .photo-component{
+        height: rem(200);
+        width: rem(240);
+        background-size: contain;
+        background-position: center;
+      }
+    }
+
+    .social_media {
+      display: flex;
+      margin-left: rem(20);
+      padding: rem(10) 0 rem(12);
+      li {
+        border-radius: 50%;
+        width: rem(32);
+        height: rem(32);
+        text-align: center;
+        line-height: rem(32);
+        margin-right: rem(10);
+        transition: all ease 0.7s;
+        &:hover {
+          border-radius: 15%;
+        }
+      }
+    }
+  }
+}
+
+.palette-cold{
+  .name {
+    color: $palette-cold-a;
+  }
+  .border {
+    border-left: rem(5) solid $palette-cold-b;
+    border-bottom: 0px;
+  }
+  .icon {
+    li {
+      border: $palette-cold-c rem(2) solid;
+    }
+    .fas,
+    .far,
+    .fab {
+      color: $palette-cold-a;
+    }
+  }
+  .photo{
+    background-image: url('../../images/Ginkgo.png');
+    .frame{
+      background-image: url('../../images/transparency_cold.png');
+    }
+  }
+  
+}
+.palette-warm{
+  .name {
+    color: $palette-warm-a;
+  }
+  .border {
+    border-left: rem(5) solid $palette-warm-b;
+    border-bottom: 0px;
+  }
+  .icon {
+    li {
+      border: $palette-warm-c rem(2) solid;
+    }
+    .fas,
+    .far,
+    .fab {
+      color: $palette-warm-a;
+    }
+  }
+  .photo{
+    background-image: url('../../images/Amapola.png');
+    .frame{
+      background-image: url('../../images/transparency_warm.png');
+      transform: scale(-1, 1);
+    }
+  }
+  
+}
+.palette-medium{
+  .name {
+    color: $palette-medium-a;
+  }
+  .border{
+    border-left: rem(5) solid $palette-medium-b;
+    border-bottom: 0px;
+  }
+  .icon{
+    li {
+      border: $palette-medium-c rem(2) solid;
+    }
+    .fas,
+    .far,
+    .fab {
+      color: $palette-medium-a;
+    }
+  }
+  .photo{
+    background-image: url('../../images/Girasol.png');
+    .frame{
+      background-image: url('../../images/transparency_medium.png');
+      transform: rotate(deg) scale(-1, 1);
+    }
+  }
+}
+
+.js-frame {
+  height: rem(200);
+  width: rem(240);
+  background-size: cover;
+  &-hidden {
+    display: none;
+  }
+}

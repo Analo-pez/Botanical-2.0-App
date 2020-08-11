@@ -1,0 +1,5 @@
+@import './vars';
+
+@function rem($pixels) {
+  @return ($pixels / $font-regular * 1rem);
+}
