@@ -49,6 +49,25 @@ function Card() {
     localStorage.setItem('palette', palette);
   });
 
+  const resetCard = () => {
+    setName('');
+    setJob('');
+    setEmail('');
+    setPhone('');
+    setLinkedin('');
+    setGithub('');
+    setPalette('1');
+    setPhoto('');
+    localStorage.removeItem('name');
+    localStorage.removeItem('job');
+    localStorage.removeItem('email');
+    localStorage.removeItem('phone');
+    localStorage.removeItem('linkedin');
+    localStorage.removeItem('github');
+    localStorage.removeItem('palette');
+    localStorage.removeItem('photo');
+  };
+
   return (
     <div className="App">
       <Header />
@@ -63,6 +82,7 @@ function Card() {
             github={github}
             palette={palette}
             photo={photo}
+            resetCard={resetCard}
           />
 
           <Form

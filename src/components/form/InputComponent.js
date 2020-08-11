@@ -30,6 +30,7 @@ class InputComponent extends React.Component {
           maxLength={this.props.max}
           placeholder={this.props.placeholder}
           required
+          value={this.props.value}
           onChange={this.handleChange}
         />
         <small className="js-error-message">{this.props.errorText}</small>

@@ -11,7 +11,16 @@ const Form = (props) => {
     <section className="page__form">
       <form method="post" className="js-form">
         <Design palette={props.palette} handleInput={props.handleInput} />
-        <Fill handleInput={props.handleInput} />
+        <Fill
+          name={props.name}
+          job={props.job}
+          email={props.email}
+          phone={props.phone}
+          linkedin={props.linkedin}
+          github={props.github}
+          photo={props.photo}
+          handleInput={props.handleInput}
+        />
         <Share
           name={props.name}
           job={props.job}
